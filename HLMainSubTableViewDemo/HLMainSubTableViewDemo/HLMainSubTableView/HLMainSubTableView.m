@@ -79,6 +79,8 @@
                     Method method2 = class_getInstanceMethod([self class], @selector(hl_subScrollViewDidScroll:));
                     method_exchangeImplementations(method1, method2);
                 });
+            }else{
+                NSLog(@"未指定TableView类型或指定类型为HLMainSubTableViewTypeNone");
             }
         }else{
             NSString *des = [NSString stringWithFormat:@"%@未实现scrollViewDidScroll:方法!",NSStringFromClass([delegate class])];
